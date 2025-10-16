@@ -214,7 +214,7 @@ const BusinessApplications = () => {
                 {industry.useCases.map((useCase, useCaseIndex) => (
                   <Card 
                     key={useCaseIndex}
-                    className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 group"
+                    className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-glow-primary group"
                   >
                     <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
                       {useCase.name}

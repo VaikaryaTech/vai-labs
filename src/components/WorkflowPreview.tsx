@@ -17,7 +17,7 @@ export const WorkflowPreview = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border">
+          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border hover:scale-[1.01] transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Workflow nodes */}
               <div className="flex items-center gap-4 flex-wrap justify-center">

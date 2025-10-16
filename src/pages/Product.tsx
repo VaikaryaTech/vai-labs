@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
-import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, ImageIcon, Database, FileText, Lightbulb, Settings } from "lucide-react";
+import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, Database, FileText, Lightbulb, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Product = () => {
@@ -12,12 +12,6 @@ const Product = () => {
       title: "Text Generation",
       description: "From compelling marketing copy to complex code, generate high-quality text in an instant.",
       color: "text-orange-500"
-    },
-    {
-      icon: ImageIcon,
-      title: "Image & Media Creation",
-      description: "Produce stunning visuals, graphics, and even video concepts from simple prompts.",
-      color: "text-purple-500"
     },
     {
       icon: Database,

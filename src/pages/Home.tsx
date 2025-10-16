@@ -51,8 +51,8 @@ const Home = () => {
       <section className="py-24 bg-background relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="p-8 bg-gradient-card backdrop-blur-sm border border-border rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-glow-primary">
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-orange-500/20 to-orange-700/20 mb-6">
+            <div className="group p-8 bg-gradient-card backdrop-blur-sm border border-border rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-orange-500/20 to-orange-700/20 mb-6 group-hover:from-orange-500/30 group-hover:to-orange-700/30 transition-all">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Secure by Design</h3>
@@ -61,8 +61,8 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="p-8 bg-gradient-card backdrop-blur-sm border border-border rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-glow-secondary">
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-purple-500/20 to-purple-700/20 mb-6">
+            <div className="group p-8 bg-gradient-card backdrop-blur-sm border border-border rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-glow-secondary hover:border-secondary/50">
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-purple-500/20 to-purple-700/20 mb-6 group-hover:from-purple-500/30 group-hover:to-purple-700/30 transition-all">
                 <Server className="h-8 w-8 text-secondary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">On-Premises Power</h3>
@@ -71,8 +71,8 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="p-8 bg-gradient-card backdrop-blur-sm border border-border rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-glow-primary">
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-cyan-500/20 to-cyan-700/20 mb-6">
+            <div className="group p-8 bg-gradient-card backdrop-blur-sm border border-border rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-glow-primary hover:border-cyan-500/50">
+              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-cyan-500/20 to-cyan-700/20 mb-6 group-hover:from-cyan-500/30 group-hover:to-cyan-700/30 transition-all">
                 <Zap className="h-8 w-8 text-cyan-500" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Intelligent Automation</h3>

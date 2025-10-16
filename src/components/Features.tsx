@@ -58,7 +58,7 @@ export const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={index}
-              className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 group"
+              className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-glow-primary group"
             >
               <feature.icon className={`h-10 w-10 ${feature.color} mb-4 group-hover:scale-110 transition-transform`} />
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>

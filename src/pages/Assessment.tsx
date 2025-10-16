@@ -270,7 +270,7 @@ const Assessment = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 bg-gradient-card backdrop-blur-sm border-border">
+            <Card className="p-8 bg-gradient-card backdrop-blur-sm border-border hover:scale-105 transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-2xl font-bold">Assessment Progress</h2>
                 <span className="text-3xl font-bold text-primary">{calculateOverallProgress()}%</span>
@@ -290,7 +290,7 @@ const Assessment = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             {sections.map((section) => (
-              <Card key={section.id} className="p-8 bg-gradient-card backdrop-blur-sm border-border">
+              <Card key={section.id} className="p-8 bg-gradient-card backdrop-blur-sm border-border hover:scale-[1.01] transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
                 <div className="mb-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -361,7 +361,7 @@ const Assessment = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 bg-gradient-card backdrop-blur-sm border-border border-primary/30">
+            <Card className="p-8 bg-gradient-card backdrop-blur-sm border-border border-primary/30 hover:scale-105 transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
               <p className="text-muted-foreground text-center mb-6 italic">
                 A "No" answer to any critical question indicates an area that requires attention and development 
                 before fully embarking on Generative AI adoption.
