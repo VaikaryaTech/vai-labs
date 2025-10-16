@@ -46,6 +46,16 @@ export const Navbar = () => {
               Business Applications
             </Link>
             <Link 
+              to="/assessment" 
+              className={`text-sm transition-colors ${
+                location.pathname === '/assessment' 
+                  ? 'text-foreground font-semibold' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              AI Readiness
+            </Link>
+            <Link 
               to="/demo" 
               className={`text-sm transition-colors ${
                 location.pathname === '/demo' 
