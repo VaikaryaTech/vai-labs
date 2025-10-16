@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
 import { Shield, Server, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -36,9 +37,11 @@ const Home = () => {
               <Button variant="hero" size="lg">
                 → Request a Demo
               </Button>
-              <Button variant="glass" size="lg">
-                → Explore the GenAI Engine
-              </Button>
+              <Link to="/product">
+                <Button variant="glass" size="lg">
+                  → Explore the GenAI Engine
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

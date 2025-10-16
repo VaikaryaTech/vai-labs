@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
 import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, ImageIcon, Database, FileText, Lightbulb, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   const capabilities = [
@@ -73,14 +74,13 @@ const Product = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-slide-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              Introducing{" "}
               <span className="bg-gradient-accent bg-clip-text text-transparent">
-                KOGNIX
+                GenAI Engine
               </span>
             </h1>
             
             <p className="text-2xl lg:text-3xl font-semibold text-foreground">
-              Your Secure and Flexible Generative AI Framework
+              Powered by KOGNIX - Your Secure and Flexible Generative AI Framework
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
@@ -230,9 +230,11 @@ const Product = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="hero" size="lg">
-              Explore Business Applications
-            </Button>
+            <Link to="/business-applications">
+              <Button variant="hero" size="lg">
+                Explore Business Applications
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
