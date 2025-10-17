@@ -59,18 +59,18 @@ export const WorkflowPreview = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-border">
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">400+</div>
+            <div className="mt-8 pt-8 border-t border-border/50">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">80+</div>
                   <div className="text-sm text-muted-foreground">Integrations</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-secondary mb-2">10M+</div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent">5M+</div>
                   <div className="text-sm text-muted-foreground">Workflows</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-cyan-500 mb-2">99.9%</div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-500 bg-clip-text text-transparent">99.9%</div>
                   <div className="text-sm text-muted-foreground">Uptime</div>
                 </div>
               </div>
