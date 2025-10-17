@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-lightning.png";
+import heroImage from "@/assets/hero-workflow.png";
 
 export const Hero = () => {
   return (
@@ -22,15 +21,6 @@ export const Hero = () => {
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
               Unleash the potential of hyper-automation and cognitive AI to fundamentally reshape your enterprise.
             </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg">
-                Get started for free
-              </Button>
-              <Button variant="glass" size="lg">
-                Talk to sales
-              </Button>
-            </div>
           </div>
 
           {/* Right visual */}
@@ -38,8 +28,8 @@ export const Hero = () => {
             <div className="relative animate-float">
               <img 
                 src={heroImage} 
-                alt="AI Automation Visualization" 
-                className="w-full h-auto drop-shadow-[0_0_50px_rgba(255,109,90,0.5)]"
+                alt="AI Workflow Automation Network" 
+                className="w-full h-auto drop-shadow-[0_0_50px_rgba(147,51,234,0.5)]"
               />
             </div>
           </div>
