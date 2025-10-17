@@ -36,6 +36,16 @@ export const Navbar = () => {
               GenAI Engine
             </Link>
             <Link 
+              to="/workflow-automation" 
+              className={`text-sm transition-colors ${
+                location.pathname === '/workflow-automation' 
+                  ? 'text-foreground font-semibold' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              WorkFlow Automation
+            </Link>
+            <Link 
               to="/business-applications" 
               className={`text-sm transition-colors ${
                 location.pathname === '/business-applications' 
@@ -54,16 +64,6 @@ export const Navbar = () => {
               }`}
             >
               AI Readiness
-            </Link>
-            <Link 
-              to="/demo" 
-              className={`text-sm transition-colors ${
-                location.pathname === '/demo' 
-                  ? 'text-foreground font-semibold' 
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              Demo
             </Link>
             <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Pricing

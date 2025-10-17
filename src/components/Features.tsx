@@ -1,74 +1,140 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Cloud, Lock, Zap, GitBranch, Workflow } from "lucide-react";
+import { Layers, Box, Zap, Users, Brain, MessageSquare, Mail, FileText, Calendar, Github } from "lucide-react";
 
-const features = [
+const platformFeatures = [
   {
-    icon: Code2,
-    title: "Code or No-Code",
-    description: "Build workflows with a visual editor or write custom JavaScript/Python code for complex logic.",
-    color: "text-orange-500"
-  },
-  {
-    icon: Cloud,
-    title: "Self-Host or Cloud",
-    description: "Deploy on your infrastructure for full control or use our cloud for instant setup.",
+    icon: Layers,
+    title: "The Nexus Canvas",
+    description: "Build with intuitive power. Our visual drag-and-drop workspace lets you connect cutting-edge AI models, databases, third-party APIs, and legacy tools with simple, deliberate clicks.",
     color: "text-purple-500"
   },
   {
-    icon: Lock,
-    title: "Enterprise Security",
-    description: "SOC 2 compliant with advanced encryption, SSO, and granular access controls.",
+    icon: Box,
+    title: "The Block Library",
+    description: "Your tools of invention. Select from a rich ecosystem of Smart Blocks—including Processing (AI agents, functions), Logic (decision trees, loop controls), and Output (definitive responses, validation checks).",
     color: "text-blue-500"
   },
   {
     icon: Zap,
-    title: "AI-Powered",
-    description: "Integrate with GPT-4, Claude, and other AI models to build intelligent workflows.",
+    title: "Ubiquitous Activation",
+    description: "Your automation starts where your business demands. Initiate workflows via our native chat interface, robust REST APIs, webhooks, scheduled cron jobs, or direct events from partners like Slack and GitHub.",
+    color: "text-orange-500"
+  },
+  {
+    icon: Users,
+    title: "Real-Time Foundry",
+    description: "Treat your workflows as living architecture. Our Team Collaboration features allow simultaneous editing, real-time feedback loops, and granular permission controls for unified development.",
+    color: "text-cyan-500"
+  }
+];
+
+const integrationCategories = [
+  {
+    category: "Cognitive Powerhouses",
+    items: "OpenAI, Anthropic, Google, Groq, Cerebras, Ollama",
+    icon: Brain,
+    color: "text-purple-500"
+  },
+  {
+    category: "Communication Hubs",
+    items: "Gmail, Slack, Teams, Telegram, WhatsApp",
+    icon: MessageSquare,
+    color: "text-blue-500"
+  },
+  {
+    category: "Productivity Platforms",
+    items: "Notion, Google Sheets, Airtable, Monday.com",
+    icon: FileText,
     color: "text-cyan-500"
   },
   {
-    icon: GitBranch,
-    title: "Advanced Logic",
-    description: "Conditional branching, loops, error handling, and complex data transformations.",
+    category: "Development & DevOps",
+    items: "GitHub, Jira, Linear, Advanced Browser Automation",
+    icon: Github,
+    color: "text-orange-500"
+  },
+  {
+    category: "Search & Knowledge",
+    items: "Google Search, Perplexity, Firecrawl, Exa AI",
+    icon: Mail,
     color: "text-green-500"
   },
   {
-    icon: Workflow,
-    title: "400+ Integrations",
-    description: "Connect to all your favorite tools with pre-built nodes and custom API integrations.",
+    category: "Data & Persistence",
+    items: "PostgreSQL, MySQL, Supabase, Pinecone, Qdrant",
+    icon: Calendar,
     color: "text-pink-500"
   }
 ];
 
 export const Features = () => {
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Everything you need to automate{" "}
-            <span className="bg-gradient-accent bg-clip-text text-transparent">anything</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Powerful features that give you complete control over your automation workflows
-          </p>
-        </div>
+    <>
+      {/* Platform Features Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Platform{" "}
+              <span className="bg-gradient-accent bg-clip-text text-transparent">Capabilities</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Engineered for speed, collaboration, and unmatched capability
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <Card 
-              key={index}
-              className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-glow-primary group"
-            >
-              <feature.icon className={`h-10 w-10 ${feature.color} mb-4 group-hover:scale-110 transition-transform`} />
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {feature.description}
-              </p>
-            </Card>
-          ))}
+          <div className="grid md:grid-cols-2 gap-6">
+            {platformFeatures.map((feature, index) => (
+              <Card 
+                key={index}
+                className="p-8 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-glow-primary group"
+              >
+                <feature.icon className={`h-12 w-12 ${feature.color} mb-4 group-hover:scale-110 transition-transform`} />
+                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="py-24 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(260_60%_25%/0.2),transparent_70%)]" />
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Connect Everything:{" "}
+              <span className="bg-gradient-accent bg-clip-text text-transparent">Built-in Integrations</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              KOGNIX is your universal adaptor, seamlessly integrating with over 80 essential services from day one
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {integrationCategories.map((category, index) => (
+              <Card 
+                key={index}
+                className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-glow-primary group"
+              >
+                <div className="flex items-start gap-4">
+                  <category.icon className={`h-8 w-8 ${category.color} flex-shrink-0 mt-1 group-hover:scale-110 transition-transform`} />
+                  <div>
+                    <h3 className="text-lg font-bold mb-2">{category.category}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {category.items}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

@@ -13,16 +13,14 @@ export const Hero = () => {
           {/* Left content */}
           <div className="space-y-8 animate-slide-in">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              Flexible AI workflow automation{" "}
+              Forge Your Future:{" "}
               <span className="bg-gradient-accent bg-clip-text text-transparent">
-                for technical teams
+                What You'll Engineer
               </span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Build with the precision of code or the speed of drag-n-drop. Host with on-prem control 
-              or in-the-cloud convenience. FlowAI gives you more freedom to implement multi-step AI agents 
-              and integrate apps than any other tool.
+              Unleash the potential of hyper-automation and cognitive AI to fundamentally reshape your enterprise.
             </p>
 
             <div className="flex flex-wrap gap-4">

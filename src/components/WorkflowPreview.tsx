@@ -7,14 +7,14 @@ export const WorkflowPreview = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(260_60%_25%/0.2),transparent_70%)]" />
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Build workflows that <span className="bg-gradient-accent bg-clip-text text-transparent">actually work</span>
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Connect your apps and automate workflows in minutes
-          </p>
-        </div>
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold mb-4">
+          The KOGNIX Engine: <span className="bg-gradient-accent bg-clip-text text-transparent">How Innovation Takes Form</span>
+        </h2>
+        <p className="text-xl text-muted-foreground">
+          Our platform is engineered for speed, collaboration, and unmatched capability
+        </p>
+      </div>
 
         <div className="max-w-5xl mx-auto">
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border hover:scale-[1.01] transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
