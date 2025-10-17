@@ -65,12 +65,16 @@ export const Navbar = () => {
             >
               AI Readiness
             </Link>
-            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Pricing
-            </a>
-            <a href="#docs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Docs
-            </a>
+            <Link 
+              to="/book-demo" 
+              className={`text-sm transition-colors ${
+                location.pathname === '/book-demo' 
+                  ? 'text-foreground font-semibold' 
+                  : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              Book Demo
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
