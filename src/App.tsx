@@ -10,6 +10,14 @@ import HealthcarePharma from "./pages/HealthcarePharma";
 import Assessment from "./pages/Assessment";
 import Index from "./pages/Index";
 import BookDemo from "./pages/BookDemo";
+import Pricing from "./pages/Pricing";
+import Documentation from "./pages/Documentation";
+import CaseStudies from "./pages/CaseStudies";
+import Blog from "./pages/Blog";
+import About from "./pages/About";
+import Careers from "./pages/Careers";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +36,14 @@ const App = () => (
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/workflow-automation" element={<Index />} />
           <Route path="/book-demo" element={<BookDemo />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/documentation" element={<Documentation />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
