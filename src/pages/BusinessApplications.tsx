@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
-import { Building2, HeartPulse, Scale, ShoppingBag, Factory, Wifi, GraduationCap } from "lucide-react";
+import { Building2, HeartPulse, Scale, ShoppingBag, Factory, Wifi, GraduationCap, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BusinessApplications = () => {
   const industries = [
@@ -41,6 +42,8 @@ const BusinessApplications = () => {
       icon: HeartPulse,
       title: "Healthcare and Pharmaceuticals",
       color: "text-red-500",
+      hasSubPage: true,
+      link: "/business-applications/healthcare",
       useCases: [
         {
           name: "Clinical Decision Support System (CDSS)",
@@ -205,9 +208,17 @@ const BusinessApplications = () => {
         <div className="container mx-auto px-6">
           {industries.map((industry, industryIndex) => (
             <div key={industryIndex} className="mb-24 last:mb-0">
-              <div className="flex items-center gap-4 mb-12">
-                <industry.icon className={`h-12 w-12 ${industry.color}`} />
-                <h2 className="text-4xl font-bold">{industry.title}</h2>
+              <div className="flex items-center justify-between mb-12">
+                <div className="flex items-center gap-4">
+                  <industry.icon className={`h-12 w-12 ${industry.color}`} />
+                  <h2 className="text-4xl font-bold">{industry.title}</h2>
+                </div>
+                {industry.hasSubPage && (
+                  <Link to={industry.link} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group">
+                    <span className="text-sm font-semibold">View Details</span>
+                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                )}
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
