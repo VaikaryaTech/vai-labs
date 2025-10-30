@@ -3,6 +3,13 @@ import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
 import { Building2, HeartPulse, Scale, ShoppingBag, Factory, Wifi, GraduationCap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import financeImg from "@/assets/business-finance.jpg";
+import healthcareImg from "@/assets/business-healthcare.jpg";
+import legalImg from "@/assets/business-legal.jpg";
+import retailImg from "@/assets/business-retail.jpg";
+import manufacturingImg from "@/assets/business-manufacturing.jpg";
+import telecomImg from "@/assets/business-telecom.jpg";
+import educationImg from "@/assets/business-education.jpg";
 
 const BusinessApplications = () => {
   const industries = [
@@ -10,6 +17,7 @@ const BusinessApplications = () => {
       icon: Building2,
       title: "Finance and Banking",
       color: "text-blue-500",
+      image: financeImg,
       useCases: [
         {
           name: "Regulatory Compliance Copilot",
@@ -42,6 +50,7 @@ const BusinessApplications = () => {
       icon: HeartPulse,
       title: "Healthcare and Pharmaceuticals",
       color: "text-red-500",
+      image: healthcareImg,
       hasSubPage: true,
       link: "/business-applications/healthcare",
       useCases: [
@@ -71,6 +80,7 @@ const BusinessApplications = () => {
       icon: Scale,
       title: "Legal and Compliance",
       color: "text-purple-500",
+      image: legalImg,
       useCases: [
         {
           name: "Automated Legal Research",
@@ -98,6 +108,7 @@ const BusinessApplications = () => {
       icon: ShoppingBag,
       title: "Retail and E-commerce",
       color: "text-pink-500",
+      image: retailImg,
       useCases: [
         {
           name: "Intelligent Product Search and Recommendations",
@@ -120,6 +131,7 @@ const BusinessApplications = () => {
       icon: Factory,
       title: "Manufacturing and Engineering",
       color: "text-orange-500",
+      image: manufacturingImg,
       useCases: [
         {
           name: "Maintenance and Troubleshooting Copilot",
@@ -147,6 +159,7 @@ const BusinessApplications = () => {
       icon: Wifi,
       title: "Telecommunications and Utilities",
       color: "text-cyan-500",
+      image: telecomImg,
       useCases: [
         {
           name: "Technical Support for Field Engineers",
@@ -164,6 +177,7 @@ const BusinessApplications = () => {
       icon: GraduationCap,
       title: "Education and Academia",
       color: "text-green-500",
+      image: educationImg,
       useCases: [
         {
           name: "Personalized Tutoring and Study Aid",
@@ -208,17 +222,30 @@ const BusinessApplications = () => {
         <div className="container mx-auto px-6">
           {industries.map((industry, industryIndex) => (
             <div key={industryIndex} className="mb-24 last:mb-0">
-              <div className="flex items-center justify-between mb-12">
-                <div className="flex items-center gap-4">
-                  <industry.icon className={`h-12 w-12 ${industry.color}`} />
-                  <h2 className="text-4xl font-bold">{industry.title}</h2>
+              {/* Industry Header with Image */}
+              <div className="relative h-64 rounded-2xl overflow-hidden mb-8 group">
+                <img 
+                  src={industry.image} 
+                  alt={`${industry.title} industry visualization`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`p-3 bg-background/80 backdrop-blur-sm rounded-xl ${industry.color}`}>
+                        <industry.icon className="h-8 w-8" />
+                      </div>
+                      <h2 className="text-4xl font-bold text-foreground">{industry.title}</h2>
+                    </div>
+                    {industry.hasSubPage && (
+                      <Link to={industry.link} className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors group/link">
+                        <span className="text-sm font-semibold">View Details</span>
+                        <ArrowRight className="h-5 w-5 group-hover/link:translate-x-1 transition-transform" />
+                      </Link>
+                    )}
+                  </div>
                 </div>
-                {industry.hasSubPage && (
-                  <Link to={industry.link} className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors group">
-                    <span className="text-sm font-semibold">View Details</span>
-                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                )}
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
