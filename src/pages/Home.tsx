@@ -34,9 +34,11 @@ const Home = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-8">
-              <Button variant="hero" size="lg">
-                → Request a Demo
-              </Button>
+              <Link to="/book-demo">
+                <Button variant="hero" size="lg">
+                  → Request a Demo
+                </Button>
+              </Link>
               <Link to="/product">
                 <Button variant="glass" size="lg">
                   → Explore the GenAI Engine

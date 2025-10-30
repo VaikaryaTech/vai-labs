@@ -1,5 +1,5 @@
-import { Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoNetwork from "@/assets/logo-network.png";
 
 export const Footer = () => {
   return (
@@ -7,8 +7,8 @@ export const Footer = () => {
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <Zap className="h-6 w-6 text-primary" />
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logoNetwork} alt="VAI LABS" className="h-10 w-10" />
               <span className="text-xl font-bold">VAI LABS</span>
             </div>
             <p className="text-sm text-muted-foreground">
