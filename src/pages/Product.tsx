@@ -4,6 +4,9 @@ import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
 import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, Database, FileText, Lightbulb, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
+import securityImg from "@/assets/genai-security.jpg";
+import capabilitiesImg from "@/assets/genai-capabilities.jpg";
+import costRoiImg from "@/assets/genai-cost-roi.jpg";
 
 const Product = () => {
   const capabilities = [
@@ -89,14 +92,23 @@ const Product = () => {
       {/* Security & Integration */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              Unmatched Security and Integration
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              KOGNIX's unique architecture offers unparalleled deployment options with continuous innovation 
-              and regular updates to keep your business at the forefront of AI advancements.
-            </p>
+          {/* Image Header */}
+          <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
+            <img 
+              src={securityImg} 
+              alt="Secure AI infrastructure with advanced data protection"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <h2 className="text-4xl font-bold mb-4 text-foreground">
+                Unmatched Security and Integration
+              </h2>
+              <p className="text-xl text-foreground/80 max-w-3xl">
+                KOGNIX's unique architecture offers unparalleled deployment options with continuous innovation 
+                and regular updates to keep your business at the forefront of AI advancements.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -121,10 +133,19 @@ const Product = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(260_60%_25%/0.3),transparent_70%)]" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              Cost-Effectiveness and Rapid ROI
-            </h2>
+          {/* Image Header */}
+          <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
+            <img 
+              src={costRoiImg} 
+              alt="Cost-effective AI solution with rapid ROI visualization"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <h2 className="text-4xl font-bold mb-4 text-foreground">
+                Cost-Effectiveness and Rapid ROI
+              </h2>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -152,11 +173,20 @@ const Product = () => {
       {/* Core Capabilities */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Core Capabilities</h2>
-            <p className="text-xl text-muted-foreground">
-              Powerful AI capabilities designed for modern business needs
-            </p>
+          {/* Image Header */}
+          <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
+            <img 
+              src={capabilitiesImg} 
+              alt="AI neural network showcasing advanced GenAI capabilities"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <h2 className="text-4xl font-bold mb-4 text-foreground">Core Capabilities</h2>
+              <p className="text-xl text-foreground/80">
+                Powerful AI capabilities designed for modern business needs
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

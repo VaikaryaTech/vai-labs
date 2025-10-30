@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Layers, Box, Zap, Users, Brain, MessageSquare, Mail, FileText, Calendar, Github } from "lucide-react";
+import integrationsImg from "@/assets/platform-integrations.jpg";
 
 const platformFeatures = [
   {
@@ -105,14 +106,23 @@ export const Features = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(260_60%_25%/0.2),transparent_70%)]" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              Connect Everything:{" "}
-              <span className="bg-gradient-accent bg-clip-text text-transparent">Built-in Integrations</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              KOGNIX is your universal adaptor, seamlessly integrating with over 80 essential services from day one
-            </p>
+          {/* Image Header */}
+          <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
+            <img 
+              src={integrationsImg} 
+              alt="Platform integrations hub connecting multiple services"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <h2 className="text-4xl font-bold mb-4 text-foreground">
+                Connect Everything:{" "}
+                <span className="bg-gradient-accent bg-clip-text text-transparent">Built-in Integrations</span>
+              </h2>
+              <p className="text-xl text-foreground/80 max-w-3xl">
+                KOGNIX is your universal adaptor, seamlessly integrating with over 80 essential services from day one
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

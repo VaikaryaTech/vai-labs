@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { GitBranch, Zap, MessageSquare, Database } from "lucide-react";
+import workflowImg from "@/assets/workflow-automation.jpg";
 
 export const WorkflowPreview = () => {
   return (
@@ -7,14 +8,23 @@ export const WorkflowPreview = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(260_60%_25%/0.2),transparent_70%)]" />
       
       <div className="container mx-auto px-6 relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">
-          The KOGNIX Engine: <span className="bg-gradient-accent bg-clip-text text-transparent">How Innovation Takes Form</span>
-        </h2>
-        <p className="text-xl text-muted-foreground">
-          Our platform is engineered for speed, collaboration, and unmatched capability
-        </p>
-      </div>
+        {/* Image Header */}
+        <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
+          <img 
+            src={workflowImg} 
+            alt="Visual workflow automation with AI-powered connected nodes"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">
+              The KOGNIX Engine: <span className="bg-gradient-accent bg-clip-text text-transparent">How Innovation Takes Form</span>
+            </h2>
+            <p className="text-xl text-foreground/80">
+              Our platform is engineered for speed, collaboration, and unmatched capability
+            </p>
+          </div>
+        </div>
 
         <div className="max-w-5xl mx-auto">
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border hover:scale-[1.01] transition-all duration-300 hover:shadow-glow-primary hover:border-primary/50">
