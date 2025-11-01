@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
 import { Shield, Server, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import homeHeroBackground from "@/assets/home-hero-background.jpg";
 
 const Home = () => {
   return (
@@ -10,7 +11,15 @@ const Home = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0">
+          <img 
+            src={homeHeroBackground} 
+            alt="Enterprise AI Infrastructure" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background/95" />
+        </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(260_60%_25%/0.3),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(12_100%_50%/0.2),transparent_50%)]" />
         

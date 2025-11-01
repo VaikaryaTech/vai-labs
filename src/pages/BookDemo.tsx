@@ -132,22 +132,6 @@ const BookDemo = () => {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-2xl mx-auto">
-            <div className="bg-card border border-border rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">
-                30 min
-              </div>
-              <p className="text-muted-foreground">Average demo duration</p>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent mb-2">
-                95%
-              </div>
-              <p className="text-muted-foreground">Customer satisfaction rate</p>
-            </div>
-          </div>
-
           {/* Form Section */}
           <div className="max-w-2xl mx-auto">
             <div className="bg-card border border-border rounded-lg p-8">

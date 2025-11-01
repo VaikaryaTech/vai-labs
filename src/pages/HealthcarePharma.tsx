@@ -4,6 +4,9 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle, Pill, Wrench, Beaker } from "lucide-react";
+import healthcarePharmaHero from "@/assets/healthcare-pharma-hero.jpg";
+import pharmaEquipment from "@/assets/pharma-equipment.jpg";
+import pharmaChemicals from "@/assets/pharma-chemicals.jpg";
 
 const HealthcarePharma = () => {
   const sectors = [
@@ -12,6 +15,7 @@ const HealthcarePharma = () => {
       title: "Pharmaceutical Manufacturers",
       subtitle: "(APIs & Finished Dosages)",
       color: "text-blue-500",
+      image: healthcarePharmaHero,
       useCases: [
         {
           name: "R&D / Drug Discovery",
@@ -38,6 +42,7 @@ const HealthcarePharma = () => {
       title: "Machinery, Equipment & Packaging",
       subtitle: "(PMEC)",
       color: "text-orange-500",
+      image: pharmaEquipment,
       useCases: [
         {
           name: "Equipment Maintenance / Service",
@@ -64,6 +69,7 @@ const HealthcarePharma = () => {
       title: "Excipients, Chemicals & Specialized Ingredients",
       subtitle: "",
       color: "text-purple-500",
+      image: pharmaChemicals,
       useCases: [
         {
           name: "Technical Support / Applications",
@@ -121,13 +127,28 @@ const HealthcarePharma = () => {
         <div className="container mx-auto px-6">
           {sectors.map((sector, sectorIndex) => (
             <div key={sectorIndex} className="mb-24 last:mb-0">
-              <div className="flex items-center gap-4 mb-12">
-                <sector.icon className={`h-12 w-12 ${sector.color}`} />
-                <div>
-                  <h2 className="text-4xl font-bold">{sector.title}</h2>
-                  {sector.subtitle && (
-                    <p className="text-lg text-muted-foreground mt-1">{sector.subtitle}</p>
-                  )}
+              {/* Sector Header with Image */}
+              <div className="relative overflow-hidden rounded-2xl mb-12 group">
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={sector.image} 
+                    alt={sector.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
+                </div>
+                <div className="absolute inset-0 flex items-center">
+                  <div className="container mx-auto px-6">
+                    <div className="flex items-center gap-4 max-w-4xl">
+                      <sector.icon className={`h-12 w-12 ${sector.color} flex-shrink-0`} />
+                      <div>
+                        <h2 className="text-4xl font-bold">{sector.title}</h2>
+                        {sector.subtitle && (
+                          <p className="text-lg text-muted-foreground mt-1">{sector.subtitle}</p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
