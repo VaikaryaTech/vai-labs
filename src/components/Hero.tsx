@@ -19,7 +19,7 @@ export const Hero = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              Unleash the potential of hyper-automation and cognitive AI to fundamentally reshape your enterprise.
+              Unleash the potential of intelligent orchestration and cognitive AI to fundamentally reshape your enterprise.
             </p>
           </div>
 
@@ -28,7 +28,7 @@ export const Hero = () => {
             <div className="relative animate-float">
               <img 
                 src={heroImage} 
-                alt="AI Workflow Automation Network" 
+                alt="AI Workflow Intelligence Network" 
                 className="w-full h-auto drop-shadow-[0_0_50px_rgba(147,51,234,0.5)]"
               />
             </div>

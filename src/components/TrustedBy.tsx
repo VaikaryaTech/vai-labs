@@ -12,7 +12,7 @@ export const TrustedBy = () => {
     <section className="py-16 bg-background/50">
       <div className="container mx-auto px-6">
         <p className="text-center text-muted-foreground mb-8 text-sm">
-          The world's most popular workflow automation platform for technical teams including
+          The world&apos;s most popular workflow orchestration platform for technical teams including
         </p>
         
         <div className="flex flex-wrap justify-center items-center gap-12">

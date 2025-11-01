@@ -70,7 +70,7 @@ const BusinessApplications = () => {
           benefit: "Faster R&D cycles and more informed research decisions."
         },
         {
-          name: "Medical Coding and Billing Automation",
+          name: "Medical Coding and Billing Intelligence",
           description: "Analysing clinical notes and generating accurate medical codes for billing by referencing up-to-date coding standards and payer-specific guidelines.",
           benefit: "Streamlines administrative tasks, reduces billing errors, and accelerates reimbursement."
         }

@@ -43,7 +43,7 @@ export const Navbar = () => {
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              WorkFlow Automation
+              Intelligent Workflows
             </Link>
             <Link 
               to="/business-applications" 

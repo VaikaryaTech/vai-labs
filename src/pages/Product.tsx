@@ -217,7 +217,7 @@ const Product = () => {
               KOGNIX leverages advanced deep learning models, including large language models (LLMs) and 
               diffusion models, to understand context, generate novel outputs, and continually refine its 
               capabilities. With its secure architecture and flexible deployment options, it&apos;s more than 
-              just automation; it&apos;s intelligent creation with complete data sovereignty.
+              just orchestration; it&apos;s intelligent creation with complete data sovereignty.
             </p>
           </div>
 

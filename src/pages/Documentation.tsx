@@ -23,7 +23,7 @@ const Documentation = () => {
       links: [
         "Document Management",
         "Query Optimization",
-        "Workflow Automation",
+        "Workflow Orchestration",
         "Collaboration Tools"
       ]
     },

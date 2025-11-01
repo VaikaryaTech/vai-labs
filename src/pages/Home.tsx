@@ -86,7 +86,7 @@ const Home = () => {
               <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-cyan-500/20 to-cyan-700/20 mb-6 group-hover:from-cyan-500/30 group-hover:to-cyan-700/30 transition-all">
                 <Zap className="h-8 w-8 text-cyan-500" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Intelligent Automation</h3>
+              <h3 className="text-2xl font-bold mb-4">Intelligent Orchestration</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Accelerate decision intelligence and automate complex workflows with next-gen AI capabilities.
               </p>

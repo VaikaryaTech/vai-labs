@@ -18,7 +18,7 @@ const platformFeatures = [
   {
     icon: Zap,
     title: "Ubiquitous Activation",
-    description: "Your automation starts where your business demands. Initiate workflows via our native chat interface, robust REST APIs, webhooks, scheduled cron jobs, or direct events from partners like Slack and GitHub.",
+    description: "Your workflows start where your business demands. Initiate workflows via our native chat interface, robust REST APIs, webhooks, scheduled cron jobs, or direct events from partners like Slack and GitHub.",
     color: "text-orange-500"
   },
   {
@@ -50,7 +50,7 @@ const integrationCategories = [
   },
   {
     category: "Development & DevOps",
-    items: "GitHub, Jira, Linear, Advanced Browser Automation",
+    items: "GitHub, Jira, Linear, Advanced Browser Control",
     icon: Github,
     color: "text-orange-500"
   },

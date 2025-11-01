@@ -10,11 +10,11 @@ export const WorkflowPreview = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Image Header */}
         <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
-          <img 
-            src={workflowImg} 
-            alt="Visual workflow automation with AI-powered connected nodes"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
+            <img 
+              src={workflowImg} 
+              alt="Visual workflow orchestration with AI-powered connected nodes"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8">
             <h2 className="text-4xl font-bold mb-4 text-foreground">
