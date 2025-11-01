@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
-import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, Database, FileText, Lightbulb, Settings } from "lucide-react";
+import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, Database, FileText, Lightbulb, Settings, ArrowRight, Upload, Brain, Sparkles, Download, RefreshCw } from "lucide-react";
 import { Link } from "react-router-dom";
 import securityImg from "@/assets/genai-security.jpg";
 import capabilitiesImg from "@/assets/genai-capabilities.jpg";
@@ -211,14 +211,203 @@ const Product = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(12_100%_50%/0.2),transparent_70%)]" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="max-w-5xl mx-auto text-center space-y-8 mb-16">
             <h2 className="text-4xl font-bold mb-4">How KOGNIX Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               KOGNIX leverages advanced deep learning models, including large language models (LLMs) and 
               diffusion models, to understand context, generate novel outputs, and continually refine its 
-              capabilities. With its secure architecture and flexible deployment options, it's more than 
-              just automation; it's intelligent creation with complete data sovereignty.
+              capabilities. With its secure architecture and flexible deployment options, it&apos;s more than 
+              just automation; it&apos;s intelligent creation with complete data sovereignty.
             </p>
+          </div>
+
+          {/* Flow Diagram */}
+          <div className="max-w-6xl mx-auto">
+            {/* Desktop Flow - Horizontal */}
+            <div className="hidden lg:flex items-center justify-between gap-4">
+              {/* Step 1 */}
+              <div className="flex-1">
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 h-full">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/20 to-orange-700/20 flex items-center justify-center">
+                      <Upload className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">1. Data Input</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Your data stays secure within your infrastructure
+                    </p>
+                  </div>
+                </Card>
+              </div>
+
+              <ArrowRight className="h-8 w-8 text-primary flex-shrink-0" />
+
+              {/* Step 2 */}
+              <div className="flex-1">
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-secondary/50 transition-all duration-300 h-full">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-700/20 flex items-center justify-center">
+                      <Brain className="h-8 w-8 text-secondary" />
+                    </div>
+                    <h3 className="text-xl font-bold">2. AI Processing</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Advanced LLMs analyze and understand context
+                    </p>
+                  </div>
+                </Card>
+              </div>
+
+              <ArrowRight className="h-8 w-8 text-secondary flex-shrink-0" />
+
+              {/* Step 3 */}
+              <div className="flex-1">
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-cyan-500/50 transition-all duration-300 h-full">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/20 to-cyan-700/20 flex items-center justify-center">
+                      <Sparkles className="h-8 w-8 text-cyan-500" />
+                    </div>
+                    <h3 className="text-xl font-bold">3. Generation</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Create novel outputs and intelligent insights
+                    </p>
+                  </div>
+                </Card>
+              </div>
+
+              <ArrowRight className="h-8 w-8 text-cyan-500 flex-shrink-0" />
+
+              {/* Step 4 */}
+              <div className="flex-1">
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-green-500/50 transition-all duration-300 h-full">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500/20 to-green-700/20 flex items-center justify-center">
+                      <Download className="h-8 w-8 text-green-500" />
+                    </div>
+                    <h3 className="text-xl font-bold">4. Output</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Deliver actionable results and solutions
+                    </p>
+                  </div>
+                </Card>
+              </div>
+
+              <ArrowRight className="h-8 w-8 text-green-500 flex-shrink-0" />
+
+              {/* Step 5 */}
+              <div className="flex-1">
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-pink-500/50 transition-all duration-300 h-full">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500/20 to-pink-700/20 flex items-center justify-center">
+                      <RefreshCw className="h-8 w-8 text-pink-500" />
+                    </div>
+                    <h3 className="text-xl font-bold">5. Learning</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Continuous refinement and improvement
+                    </p>
+                  </div>
+                </Card>
+              </div>
+            </div>
+
+            {/* Mobile/Tablet Flow - Vertical */}
+            <div className="lg:hidden space-y-6">
+              {/* Step 1 */}
+              <div>
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500/20 to-orange-700/20 flex items-center justify-center flex-shrink-0">
+                      <Upload className="h-8 w-8 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">1. Data Input</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Your data stays secure within your infrastructure
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+                <div className="flex justify-center py-3">
+                  <ArrowRight className="h-8 w-8 text-primary rotate-90" />
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div>
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-700/20 flex items-center justify-center flex-shrink-0">
+                      <Brain className="h-8 w-8 text-secondary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">2. AI Processing</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Advanced LLMs analyze and understand context
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+                <div className="flex justify-center py-3">
+                  <ArrowRight className="h-8 w-8 text-secondary rotate-90" />
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div>
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/20 to-cyan-700/20 flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="h-8 w-8 text-cyan-500" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">3. Generation</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Create novel outputs and intelligent insights
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+                <div className="flex justify-center py-3">
+                  <ArrowRight className="h-8 w-8 text-cyan-500 rotate-90" />
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div>
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500/20 to-green-700/20 flex items-center justify-center flex-shrink-0">
+                      <Download className="h-8 w-8 text-green-500" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">4. Output</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Deliver actionable results and solutions
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+                <div className="flex justify-center py-3">
+                  <ArrowRight className="h-8 w-8 text-green-500 rotate-90" />
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div>
+                <Card className="p-6 bg-gradient-card backdrop-blur-sm border-border">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500/20 to-pink-700/20 flex items-center justify-center flex-shrink-0">
+                      <RefreshCw className="h-8 w-8 text-pink-500" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">5. Learning</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Continuous refinement and improvement
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
