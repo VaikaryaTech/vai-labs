@@ -33,6 +33,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from 'emailjs-com';
 
 const formSchema = z.object({
   fullName: z.string().trim().min(1, { message: "Full name is required" }).max(100),
@@ -60,14 +61,44 @@ const BookDemo = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log("Form submitted:", data);
+const onSubmit = async (data: z.infer<typeof formSchema>) => {
+  try {
+    // Send using EmailJS
+    const result = await emailjs.send(
+      "service_h0q2ber",   
+      "template_cu2l9vl",
+      {
+        fullName: data.fullName,
+        email: data.email,
+        company: data.company,
+        industry: data.industry || "N/A",
+        preferredDate: data.preferredDate
+          ? data.preferredDate.toDateString()
+          : "Not specified",
+        preferredTime: data.preferredTime || "Not specified",
+        areasOfInterest: data.areasOfInterest || "Not specified",
+        hearAboutUs: data.hearAboutUs || "Not specified",
+      },
+      "1-1rwolEnwA6YCr96" 
+    );
+
+    if (result.status === 200) {
+      toast({
+        title: "✅ Demo request submitted!",
+        description:
+          "Thank you! Our team will contact you shortly to confirm your demo.",
+      });
+      form.reset();
+    }
+  } catch (error) {
+    console.error("Email send error:", error);
     toast({
-      title: "Demo request submitted!",
-      description: "Our team will contact you shortly to confirm your demo.",
+      title: "❌ Something went wrong",
+      description: "Please try again or email us directly at sales@vailabs.in",
+      variant: "destructive",
     });
-    form.reset();
-  };
+  }
+};
 
   return (
     <div className="min-h-screen bg-background">

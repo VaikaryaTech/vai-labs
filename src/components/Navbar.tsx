@@ -76,15 +76,6 @@ export const Navbar = () => {
               Book Demo
             </Link>
           </div>
-
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Sign in
-            </Button>
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
-          </div>
         </div>
       </div>
     </nav>
