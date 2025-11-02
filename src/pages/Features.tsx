@@ -1,149 +1,202 @@
-import { Database, FileText, Workflow, Settings, MessageSquare } from "lucide-react";
+import { Database, FileText, Workflow, Settings, MessageSquare, Network, LayoutDashboard } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export default function Features() {
   const featureCategories = [
     {
-      icon: Database,
-      title: "Data Processing & Retrieval",
+      icon: Network,
+      title: "Core Intelligence & Retrieval Engine",
+      description: "KOGNIX's Retrieval-Augmented Generation (RAG) engine powers precise, explainable, and context-aware intelligence.",
       color: "from-blue-500/20 to-blue-600/20",
       features: [
         {
-          name: "Deep Document Understanding",
-          description: "Utilizes models for intelligent information extraction from unstructured data with complex formats (tables, images, mixed content), ensuring 'Quality in, quality out.'"
+          name: "Deep AI Intelligence",
+          description: "Understands and extracts meaning from complex unstructured data — PDFs, tables, images, and hybrid layouts — ensuring every output is rooted in factual accuracy."
         },
         {
-          name: "Grounded Citations & Reduced Hallucinations",
-          description: "Provides traceable citations and references from source documents to support generated answers, significantly enhancing truthfulness and reliability."
+          name: "Source-Cited Responses",
+          description: "Every generated insight links back to its original source, minimizing hallucinations and improving trustworthiness."
         },
         {
-          name: "Hybrid Search Techniques",
-          description: "Converged context engine using Vector Search (semantic similarity), Full-Text/Keyword Search (Elasticsearch/Infinity), and Fused Re-ranking for optimal relevance."
+          name: "Hybrid Retrieval Engine",
+          description: "Combines vector-based semantic search with traditional keyword search for unparalleled recall and precision."
         },
         {
-          name: "Document Engines",
-          description: "Supports Infinity (fast vector retrieval), Elasticsearch (full-text indexing), and OpenSearch for vector storage and indexing."
+          name: "Smart Re-ranking Pipeline",
+          description: "Dynamically reorders retrieved data to surface the most relevant and high-confidence information first."
         },
         {
-          name: "Tiered Knowledge Base / Page Rank",
-          description: "Prioritize higher-quality datasets or documents by setting a 'Page Rank' to influence retrieval."
+          name: "High-Performance Indexing",
+          description: "Optimized for speed and scale with native integrations for Infinity, Elasticsearch, and OpenSearch."
+        },
+        {
+          name: "Tiered Knowledge Ranking",
+          description: "Lets you prioritize critical datasets using a custom PageRank-style system for smarter retrieval decisions."
+        },
+        {
+          name: "Graph-Aware Reasoning",
+          description: "Supports Graph workflows for relationship-based retrieval and complex multi-hop reasoning."
         }
       ]
     },
     {
       icon: FileText,
-      title: "Data Ingestion & Processing",
+      title: "Advanced Data Ingestion & Processing",
+      description: "KOGNIX transforms fragmented enterprise data into structured, searchable intelligence.",
       color: "from-purple-500/20 to-purple-600/20",
       features: [
         {
-          name: "Heterogeneous Data Source Compatibility",
-          description: "Supports PDF, DOC, DOCX, TXT, MD, MDX, CSV, XLSX, XLS, Images (JPEG, PNG, TIF, GIF), Slides (PPT, PPTX), Audio files, and Web Pages/HTML."
+          name: "Universal Data Compatibility",
+          description: "Seamlessly ingests content from documents (PDF, Word, TXT, Markdown), spreadsheets (CSV, XLSX), slides, web pages, and even media files (images, audio)."
         },
         {
-          name: "Intelligent & Template-Based Chunking",
-          description: "Templates for different document layouts (Q&A, Resume, Paper, Law, Table). Includes DeepDoc model for advanced PDF parsing, Document Layout Analysis (DLA), OCR, and TSR."
+          name: "Smart Chunking Framework",
+          description: "Automatically segments documents using layout-aware templates (Q&A, Legal, Resume, Research, Tabular, etc.) to maintain semantic context."
         },
         {
-          name: "RAPTOR Method",
-          description: "Recursive Abstractive Processing for Tree-structured Organization to maintain semantic integrity."
+          name: "DeepDoc Parsing Engine",
+          description: "Performs advanced layout analysis, OCR, and table recognition for even the most complex PDFs."
         },
         {
-          name: "Human Intervention & Transparency",
-          description: "Visualization of text chunking results, allowing users to view processed chunks, locate original text, and manually add keywords or corrections."
+          name: "Human-in-the-Loop Controls",
+          description: "Review, edit, and refine extracted chunks or add keywords through an intuitive visual interface."
         },
         {
-          name: "Data Pre-processing Enhancements",
-          description: "Knowledge Graph Construction, Auto-Keyword Extraction, Auto-Question Generation (similar to HyDE), and Long-Context RAG support."
+          name: "RAPTOR Pipeline",
+          description: "Recursive, abstractive document processing for hierarchical text understanding."
+        },
+        {
+          name: "Knowledge Graph Generation",
+          description: "Builds concept networks and mind maps to power context-driven reasoning."
+        },
+        {
+          name: "AI-Powered Preprocessing",
+          description: "Automatically extracts keywords and generates synthetic questions to enhance future query accuracy."
+        },
+        {
+          name: "Long-Context Retrieval",
+          description: "Supports extensive document contexts for enterprise-scale comprehension."
         }
       ]
     },
     {
       icon: Workflow,
-      title: "Agent & Workflow Capabilities",
+      title: "Agentic AI & Workflow Automation",
+      description: "Transform business processes into self-operating intelligence with KOGNIX Agents.",
       color: "from-green-500/20 to-green-600/20",
       features: [
         {
-          name: "Agentic Workflow / Agent Builder",
-          description: "No-code workflow editing interface (similar to an IDE) to orchestrate complex RAG and business scenarios."
+          name: "Visual Agent Builder",
+          description: "A drag-and-drop, low-code canvas for designing AI-driven workflows and RAG pipelines — no programming required."
         },
         {
           name: "Multi-Agent Deep Research",
-          description: "Supports advanced reasoning and multi-step processes like Deep Research."
+          description: "Enables collaborative, multi-step reasoning between agents to handle complex, layered problems."
         },
         {
-          name: "Tool Calling",
-          description: "Agents can execute tools within workflows: Web Search (Tavily integration), Execute SQL, and Generate Component for LLM-based generation."
+          name: "Tool & API Orchestration",
+          description: "Agents can execute external tools such as live web search, SQL querying, or content generation steps."
         },
         {
-          name: "Pre-built Agent Templates",
-          description: "Starter templates for E-Commerce Customer Support, Resume Analysis, SEO-optimized Blog Writing, Three-step Translation, and more."
+          name: "Pre-Built Agent Templates",
+          description: "Ready-to-use agent blueprints for use cases like customer support, document summarization, SEO content, and translations."
         },
         {
-          name: "Debugging",
-          description: "Step-run debugging features for Agents to streamline development."
+          name: "Agent-to-Agent Collaboration",
+          description: "Build distributed multi-agent systems that communicate to complete composite enterprise tasks."
+        },
+        {
+          name: "Debug & Trace Execution",
+          description: "Run step-by-step debugging to test and refine agent logic in real time."
         }
       ]
     },
     {
       icon: Settings,
-      title: "System & Model Management",
+      title: "Model Ecosystem & Integrations",
+      description: "Freedom to choose, integrate, and scale with your preferred AI stack.",
       color: "from-orange-500/20 to-orange-600/20",
       features: [
         {
-          name: "Model Provider Flexibility",
-          description: "Supports mainstream LLMs and embedding models including OpenAI-compatible APIs, Tongyi-Qianwen (Qwen), DeepSeek, and ModelScope."
+          name: "Broad Model Support",
+          description: "Compatible with over 40 AI providers and 400+ LLMs and embedding models, including OpenAI, DeepSeek, Qwen, and ModelScope."
         },
         {
-          name: "Architecture",
-          description: "Clear client-server architecture with deployment options via Docker or from source; supports x86 CPU and NVIDIA GPU devices."
+          name: "Open API Architecture",
+          description: "Plug into your existing ecosystem with RESTful and Python APIs for datasets, agents, and conversations."
         },
         {
-          name: "Data Storage Flexibility",
-          description: "Metadata Storage (MySQL, PostgreSQL) and Object Storage (MinIO, S3, Azure Blob)."
+          name: "KOGNIX MCP Integration",
+          description: "Unified multi-cloud management for deployments across AWS, Azure, or private data centers."
         },
         {
-          name: "Comprehensive APIs",
-          description: "HTTP/RESTful and Python APIs for dataset management, conversation/chat completion, and stream output support."
+          name: "Adaptive Model Selection",
+          description: "Choose or switch models dynamically per task or dialogue for optimized performance."
+        }
+      ]
+    },
+    {
+      icon: Database,
+      title: "Deployment, Management & Scalability",
+      description: "Enterprise-grade performance with simple deployment and full administrative control.",
+      color: "from-cyan-500/20 to-cyan-600/20",
+      features: [
+        {
+          name: "Flexible Deployment",
+          description: "Launch instantly via Docker, source install, or KOGNIX MCP for cloud-native scalability."
         },
         {
-          name: "Admin CLI",
-          description: "Backend system management tools including User Lifecycle Management, service monitoring, and fine-grained control over Datasets and Agents."
+          name: "Data Storage Options",
+          description: "Choose between MySQL or PostgreSQL for metadata, and MinIO, AWS S3, or Azure Blob for object storage."
+        },
+        {
+          name: "Admin Command Line Interface (CLI)",
+          description: "Manage users, monitor services, and control datasets and agents directly from the terminal."
+        },
+        {
+          name: "Enterprise Scalability",
+          description: "Built to handle large-scale deployments with high concurrency and massive data throughput."
+        },
+        {
+          name: "Monitoring & Lifecycle Management",
+          description: "Track users, datasets, and services through an integrated admin dashboard."
         }
       ]
     },
     {
       icon: MessageSquare,
-      title: "Chat & User Experience",
+      title: "Chat Experience & User Interaction",
+      description: "Empower users with an intelligent, multilingual, and context-aware chat environment.",
       color: "from-pink-500/20 to-pink-600/20",
       features: [
         {
-          name: "AI Chat Assistants",
-          description: "Create multi-turn chat assistants with customizable configurations, system prompts, and model selection."
+          name: "Custom AI Assistants",
+          description: "Build multi-turn conversational agents tailored to your business workflows."
         },
         {
-          name: "Multi-turn Optimization",
-          description: "Enhances user queries based on ongoing conversation context."
+          name: "Context-Persistent Conversations",
+          description: "Keeps track of previous exchanges for coherent, ongoing dialogue."
         },
         {
-          name: "Empty Response Configuration",
-          description: "Option to confine answers strictly to provided datasets to prevent improvisation."
+          name: "Configurable System Prompts",
+          description: "Shape your assistant's behavior and tone using role-based system prompts."
         },
         {
-          name: "Deep Research",
-          description: "Agentic reasoning capabilities for complex query handling."
+          name: "Grounded AI Responses",
+          description: "Restrict outputs to your dataset for compliance and control."
         },
         {
-          name: "AI Search Interface",
-          description: "Single-turn AI conversation mode utilizing hybrid search strategy."
+          name: "Multilingual & Cross-Language Search",
+          description: "Supports multilingual UI and search for global enterprises."
         },
         {
-          name: "Multilingual Support",
-          description: "Cross-language search and localization (e.g., German UI)."
+          name: "Voice Interaction",
+          description: "Integrates Text-to-Speech (TTS) via FishAudio or Tongyi Qwen for conversational AI experiences."
         },
         {
-          name: "Audio Output",
-          description: "Text-to-Speech (TTS) via FishAudio or Tongyi Qwen TTS."
+          name: "Deep Research Mode",
+          description: "Enables structured reasoning across multiple data sources and contexts."
         }
       ]
     }
@@ -157,10 +210,10 @@ export default function Features() {
       <section className="pt-32 pb-16 px-6">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Comprehensive GenAI Features
+            KOGNIX Platform Features
           </h1>
           <p className="text-xl text-muted-foreground">
-            Enterprise-grade capabilities designed for sophisticated AI applications, from advanced retrieval to intelligent workflows
+            Enterprise-grade AI capabilities from intelligent retrieval to autonomous agents
           </p>
         </div>
       </section>
@@ -176,7 +229,10 @@ export default function Features() {
                   <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} backdrop-blur-sm`}>
                     <Icon className="h-8 w-8 text-foreground" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">{category.title}</h2>
+                  <div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-2">{category.title}</h2>
+                    <p className="text-lg text-muted-foreground">{category.description}</p>
+                  </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -197,6 +253,91 @@ export default function Features() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* KOGNIX Dashboard Section */}
+      <section className="py-24 px-6 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="p-4 rounded-xl bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 backdrop-blur-sm">
+              <LayoutDashboard className="h-8 w-8 text-foreground" />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2">KOGNIX Dashboard</h2>
+              <p className="text-lg text-muted-foreground">Your Command Center for Intelligent AI Operations</p>
+            </div>
+          </div>
+
+          <div className="space-y-12">
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p className="text-foreground/90 leading-relaxed">
+                The KOGNIX Dashboard is a unified control center designed to give enterprises complete visibility into their AI ecosystem — from data ingestion to model orchestration. Every tile, chart, and insight is crafted for precision, speed, and transparency.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-primary">⚡ At-a-Glance Overview</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Gain instant situational awareness with a clean, minimalist layout that surfaces the most critical operational metrics:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Total Files & Datasets: Track uploaded documents and active datasets in real time.</li>
+                  <li>• Active Conversations & Agents: Monitor ongoing chats, running agents, and queued workflows.</li>
+                  <li>• Performance Health: See system latency, token usage, and model activity summarized on a single screen.</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-primary">🔍 System Insights</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  The System Insights layer offers a live snapshot of your AI infrastructure:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• API Tokens & User Activity: Stay in control of API consumption and user canvases.</li>
+                  <li>• Model Inventory: View and manage all active LLMs — personal, team, and available global models.</li>
+                  <li>• Template Library: Access over 20 pre-configured canvas templates.</li>
+                  <li>• File Storage Tracker: Keep an eye on total file volume and storage utilization.</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-primary">🧠 System Status Overview</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Designed for transparency and operational confidence:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Database Health: Real-time monitoring of MySQL or PostgreSQL database performance.</li>
+                  <li>• Document Engine (Elasticsearch): Track shard activity, indexing latency, and search responsiveness.</li>
+                  <li>• Task Executor: View job queues, lag time, and pending tasks for backend operations.</li>
+                  <li>• Redis & Object Storage: Instantly verify cache performance and MinIO/S3 storage health.</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-primary">📈 Deep Insights & Analytics</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  The Overview section visualizes platform intelligence:
+                </p>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Model Token Usage: Understand consumption patterns across your deployed LLMs.</li>
+                  <li>• Top Models by Usage: Identify which models drive the most business value.</li>
+                  <li>• Document Type Analysis: Get a breakdown of processed content formats for better dataset planning.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20">
+              <h3 className="text-2xl font-bold mb-4">Why It Matters</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-muted-foreground">
+                <p>• Single-pane observability: No more switching tools to check system or agent health.</p>
+                <p>• Enterprise-ready monitoring: Database, task execution, search, and storage health — all tracked live.</p>
+                <p>• Instant insight into AI performance: Understand how data, models, and agents interact in real time.</p>
+                <p>• Secure multi-user visibility: Role-based dashboards ensure the right people see the right insights.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
