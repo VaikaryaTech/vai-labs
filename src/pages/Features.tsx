@@ -6,7 +6,7 @@ export default function Features() {
   const featureCategories = [
     {
       icon: Database,
-      title: "Core RAG Capabilities & Retrieval",
+      title: "Data Processing & Retrieval",
       color: "from-blue-500/20 to-blue-600/20",
       features: [
         {
