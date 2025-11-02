@@ -2,46 +2,13 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
-import { Shield, Link2, Boxes, DollarSign, TrendingDown, Code2, Database, FileText, Lightbulb, Settings, ArrowRight, Upload, Brain, Sparkles, Download, RefreshCw } from "lucide-react";
+import { Shield, Link2, Boxes, DollarSign, TrendingDown, Upload, Brain, Sparkles, Download, RefreshCw, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import securityImg from "@/assets/genai-security.jpg";
 import capabilitiesImg from "@/assets/genai-capabilities.jpg";
 import costRoiImg from "@/assets/genai-cost-roi.jpg";
 
 const Product = () => {
-  const capabilities = [
-    {
-      icon: Code2,
-      title: "Text Generation",
-      description: "From compelling marketing copy to complex code, generate high-quality text in an instant.",
-      color: "text-orange-500"
-    },
-    {
-      icon: Database,
-      title: "Data Synthesis & Analysis",
-      description: "Identify patterns, predict trends, and synthesize insights from vast amounts of data.",
-      color: "text-blue-500"
-    },
-    {
-      icon: FileText,
-      title: "Automated Content Creation",
-      description: "Efficiently produce diverse content formats for various platforms.",
-      color: "text-cyan-500"
-    },
-    {
-      icon: Lightbulb,
-      title: "Problem Solving & Optimization",
-      description: "Apply intelligent algorithms to solve complex business challenges and optimize processes.",
-      color: "text-green-500"
-    },
-    {
-      icon: Settings,
-      title: "Customization & Adaptability",
-      description: "Designed to learn and adapt to your specific business needs and data.",
-      color: "text-pink-500"
-    }
-  ];
-
   const features = [
     {
       icon: Shield,
@@ -170,38 +137,30 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Core Capabilities */}
+      {/* Features Link Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          {/* Image Header */}
-          <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
-            <img 
-              src={capabilitiesImg} 
-              alt="AI neural network showcasing advanced GenAI capabilities"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8">
-              <h2 className="text-4xl font-bold mb-4 text-foreground">Core Capabilities</h2>
-              <p className="text-xl text-foreground/80">
-                Powerful AI capabilities designed for modern business needs
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilities.map((capability, index) => (
-              <Card 
-                key={index}
-                className="p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 group"
-              >
-                <capability.icon className={`h-10 w-10 ${capability.color} mb-4 group-hover:scale-110 transition-transform`} />
-                <h3 className="text-xl font-semibold mb-3">{capability.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {capability.description}
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="relative h-80 rounded-2xl overflow-hidden mb-12 group">
+              <img 
+                src={capabilitiesImg} 
+                alt="AI neural network showcasing advanced GenAI capabilities"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
+                <h2 className="text-4xl font-bold mb-4 text-foreground">Explore Our Comprehensive Features</h2>
+                <p className="text-xl text-foreground/80 mb-8">
+                  Discover the full range of capabilities and features that power KOGNIX
                 </p>
-              </Card>
-            ))}
+                <Link to="/features">
+                  <Button size="lg" className="group">
+                    View All Features
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
